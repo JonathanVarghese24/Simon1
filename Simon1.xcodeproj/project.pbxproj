@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D884A2442CDBC2A500709C05 /* impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D884A2432CDBC2A500709C05 /* impact.ttf */; };
 		D8DDBC5F2C94AC0F00629A6B /* Simon1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DDBC5E2C94AC0F00629A6B /* Simon1App.swift */; };
 		D8DDBC612C94AC0F00629A6B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DDBC602C94AC0F00629A6B /* ContentView.swift */; };
 		D8DDBC632C94AC1100629A6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8DDBC622C94AC1100629A6B /* Assets.xcassets */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D884A2432CDBC2A500709C05 /* impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = impact.ttf; sourceTree = "<group>"; };
+		D884A2452CDBC2D100709C05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D8DDBC5B2C94AC0F00629A6B /* Simon1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simon1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8DDBC5E2C94AC0F00629A6B /* Simon1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simon1App.swift; sourceTree = "<group>"; };
 		D8DDBC602C94AC0F00629A6B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,10 +98,12 @@
 		D8DDBC5D2C94AC0F00629A6B /* Simon1 */ = {
 			isa = PBXGroup;
 			children = (
+				D884A2452CDBC2D100709C05 /* Info.plist */,
 				D8DDBC5E2C94AC0F00629A6B /* Simon1App.swift */,
 				D8DDBC602C94AC0F00629A6B /* ContentView.swift */,
 				D8DDBC622C94AC1100629A6B /* Assets.xcassets */,
 				D8DDBC642C94AC1100629A6B /* Simon1.entitlements */,
+				D884A2432CDBC2A500709C05 /* impact.ttf */,
 				D8DDBC652C94AC1100629A6B /* Preview Content */,
 			);
 			path = Simon1;
@@ -235,6 +240,7 @@
 			files = (
 				D8DDBC672C94AC1100629A6B /* Preview Assets.xcassets in Resources */,
 				D8DDBC632C94AC1100629A6B /* Assets.xcassets in Resources */,
+				D884A2442CDBC2A500709C05 /* impact.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +430,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Simon1/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -462,6 +469,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Simon1/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

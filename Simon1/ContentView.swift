@@ -21,7 +21,7 @@ struct ContentView: View {
         ZStack {
             VStack {
                 Text("Simon")
-                    .font(.system(size: 70))
+                    .font(Font.custom("impact", size: 70))
                 Spacer()
             }
             VStack {
@@ -40,21 +40,21 @@ struct ContentView: View {
             }
             VStack {
                 Spacer()
-                Button(isPlaying ? "Playing..." : "Start Game") { // changes simon code
+                Button(isPlaying ? "Playing..." : "Start Game") {
                     startGame()
                 }
                 .buttonStyle(.bordered)
-                .disabled(isPlaying || isShowingSequence) //disables play button when game is in progress
+                .disabled(isPlaying || isShowingSequence)
                 
                 Text("Score: \(score)")
-                    .font(.system(size: 55)) //score
+                    .font(.system(size: 55))
             }
         }
         .preferredColorScheme(.dark)
         .alert("Game Over", isPresented: $showGameOver) {
             Button("Play Again", action: startGame)
         } message: {
-            Text("Your final score was \(score)") //alert to show end score
+            Text("Your final score was \(score)")
         }
     }
     
@@ -76,11 +76,11 @@ struct ContentView: View {
         isShowingSequence = true
         flashingColor = nil
         
-        Task {
+        Task {                                                               //used ai to help with delays
             for color in sequence {
-                try? await Task.sleep(nanoseconds: 500_000_000) // 0.5 second delay
+                try? await Task.sleep(for: .seconds(0.5)) // 0.5 second delay
                 flashColor(color)
-                try? await Task.sleep(nanoseconds: 500_000_000) // 0.5 second delay
+                try? await Task.sleep(for: .seconds(0.5)) // 0.5 second delay
                 flashingColor = nil
             }
             isShowingSequence = false
@@ -97,8 +97,8 @@ struct ContentView: View {
         playerSequence.append(index)
         flashColor(index)
         
-        Task {
-            try? await Task.sleep(nanoseconds: 300_000_000) // 0.3 second flash
+        Task {                                                               //used ai to help with delays
+            try? await Task.sleep(for: .seconds(0.3)) // 0.3 second flash
             flashingColor = nil
             
             if !checkPlayerInput() {
@@ -106,7 +106,7 @@ struct ContentView: View {
             } else if playerSequence.count == sequence.count {
                 score += 1
                 playerSequence = []
-                try? await Task.sleep(nanoseconds: 1_000_000_000) // 1 second delay
+                try? await Task.sleep(for: .seconds(1)) // 1 second delay
                 addToSequence()
             }
         }
